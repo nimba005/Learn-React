@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    window.location.href = 'https://reactjs.org';
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Optional: You can remove the link to "Learn React" */}
       </header>
     </div>
   );
